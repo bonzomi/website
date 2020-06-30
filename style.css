@@ -27,6 +27,13 @@ h1 {
 	margin-bottom: 15px;
 }
 
+.btmright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+
 .showcase {
 	height: 100vh;
 	display: flex;
@@ -35,6 +42,7 @@ h1 {
 	text-align: center;
 	color: #fff;
 	padding: 0 20px;
+
 }
 
 .video-container {
@@ -44,7 +52,7 @@ h1 {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: var(--primary-color) no-repeat center
+	background: var(--primary-color)  no-repeat center
 		center/cover;
 }
 
@@ -75,17 +83,14 @@ h1 {
 
 .btn {
 	display: inline-block;
-	padding: 10px 30px;
-	background: var(--primary-color);
-	color: #fff;
-	border-radius: 5px;
-	border: solid #fff 1px;
-	margin-top: 25px;
 	opacity: 0.85;
+	padding: 0 5px;
+	opacity: 0.9;
 }
 
 .btn:hover {
-	transform: scale(0.98);
+	transform: scale(0.95);
+	opacity: 0.8;
 }
 
 .logo {
@@ -98,22 +103,48 @@ h1 {
 	transform: scale(0.998);
 }
 
-#about {
-	padding: 40px;
-	text-align: center;
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0B0B0B;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 }
-
-#about p {
-	font-size: 1.2rem;
-	max-width: 600px;
-	margin: auto;
+.loader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url('loading.png');
+  background-repeat:no-repeat;
+   background-size:contain;
+  position: relative;
+  animation: loader 2s infinite ease;
+	z-index: 3;
 }
-
-#about h2 {
-	margin: 30px 0;
-	color: var(--primary-color);
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+  
 }
-
-.social a {
-	margin: 0 5px;
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }
