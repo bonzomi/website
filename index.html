@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<link rel="stylesheet" href="style.css">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
 	<link rel="shortcut icon" href="logo.ico" />
 	<title>Bonzomi</title>
 </head>
@@ -20,18 +21,23 @@
 				<a href="http://vimeo.com/bonzomi/" class="logo"><img src="Logo.png" alt="Logo">
 				</a>
 				<div class="btmright">
-				<a href="http://vimeo.com/bonzomi/" class="btn"><img src="linkedin.png" alt="LI" style="width:25px;height:25px;">
-				</a><a href="http://vimeo.com/bonzomi/2" class="btn"><img src="facebook.png" alt="LI" style="width:25px;height:25px;">
-				</a>
+				<a href="https://www.linkedin.com/in/farhan-chin/" class="btn"><i class="fab fa-linkedin fa-2x"></i></a>
+				<a href="https://web.facebook.com/%E3%81%BC%E3%82%93-107572377549094" class="btn"><i class="fab fa-facebook fa-2x"></i></a>
+				<a href="http://vimeo.com/bonzomi/" class="btn"><i class="fab fa-vimeo fa-2x"></i></a>
 				</div>
 			</div>
 		</section>
 		
 		 
-    <script>
+   <script>
         $(window).on("load",function(){
-          $(".loader-wrapper").fadeOut("slow");
+			setTimeout(
+  function() 
+  {
+    $(".loader-wrapper").fadeOut("slow");
+  }, 1000);
+         
         });
-    </script>
+</script>
 </body>
 </html>
